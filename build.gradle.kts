@@ -10,7 +10,7 @@ plugins {
   id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
-group = "me.tzfel"
+group = "com.example"
 version = "1.0.0-SNAPSHOT"
 description = "Example Plugin"
 
@@ -79,7 +79,7 @@ tasks {
 
 bukkit {
   load = BukkitPluginDescription.PluginLoadOrder.STARTUP
-  main = "me.tzfel.ExamplePlugin"
+  main = "com.example.ExamplePlugin"
   apiVersion = "1.18"
   authors = listOf("ITzFel17")
 }

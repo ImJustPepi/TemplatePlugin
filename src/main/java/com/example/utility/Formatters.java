@@ -1,4 +1,4 @@
-package me.tzfel.utility;
+package com.example.utility;
 
 import org.bukkit.ChatColor;
 

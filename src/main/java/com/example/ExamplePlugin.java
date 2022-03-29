@@ -1,7 +1,7 @@
-package me.tzfel;
+package com.example;
 
 import co.aikar.commands.PaperCommandManager;
-import me.tzfel.command.ExampleCommand;
+import com.example.command.ExampleCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ExamplePlugin extends JavaPlugin {

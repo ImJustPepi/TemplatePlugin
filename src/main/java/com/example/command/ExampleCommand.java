@@ -1,10 +1,8 @@
-package me.tzfel.command;
+package com.example.command;
 
-import co.aikar.commands.BaseCommand;
-import co.aikar.commands.CommandIssuer;
-import co.aikar.commands.RegisteredCommand;
+import co.aikar.commands.*;
 import co.aikar.commands.annotation.*;
-import me.tzfel.utility.Formatters;
+import com.example.utility.Formatters;
 import org.bukkit.entity.Player;
 
 @CommandAlias("example")
@@ -22,6 +20,6 @@ public class ExampleCommand extends BaseCommand {
 
   @Override
   public void showSyntax(CommandIssuer issuer, RegisteredCommand<?> cmd) {
-    issuer.sendMessage(Formatters.format(cmd.getSyntaxText()));
+    issuer.sendMessage(MessageType.SYNTAX, MessageKeys.INVALID_SYNTAX,Formatters.format(cmd.getSyntaxText()));
   }
 }
