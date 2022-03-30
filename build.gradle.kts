@@ -65,15 +65,15 @@ tasks {
 
   shadowJar {
 
-    fun reloc(pkg: String) = relocate(pkg, "me.tzfel.dependency.$pkg")
+    fun reloc(pkg: String) = relocate(pkg, "com.example.dependency.$pkg")
 
 
     //reloc("cloud.commandframework")
     reloc("io.leangen.geantyref")
 
-    relocate("co.aikar.taskchain", "me.tzfel.taskchain")
-    relocate("co.aikar.commands", "me.tzfel.acf")
-    relocate("co.aikar.locales", "me.tzfel.locales")
+    relocate("co.aikar.taskchain", "com.example.taskchain")
+    relocate("co.aikar.commands", "com.example.acf")
+    relocate("co.aikar.locales", "com.example.locales")
   }
 }
 

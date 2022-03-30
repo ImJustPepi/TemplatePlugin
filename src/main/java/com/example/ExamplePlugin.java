@@ -1,7 +1,11 @@
 package com.example;
 
 import co.aikar.commands.PaperCommandManager;
+import co.aikar.taskchain.BukkitTaskChainFactory;
+import co.aikar.taskchain.TaskChain;
+import co.aikar.taskchain.TaskChainFactory;
 import com.example.command.ExampleCommand;
+import com.example.listener.discord.DiscordListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ExamplePlugin extends JavaPlugin {
@@ -12,7 +16,7 @@ public class ExamplePlugin extends JavaPlugin {
   public void onEnable() {
     initPlugin();
     instance = this;
-
+    taskChainFactory = BukkitTaskChainFactory.create(this);
   }
 
 
@@ -23,7 +27,8 @@ public class ExamplePlugin extends JavaPlugin {
 
 
   public void initPlugin() {
-
+    //Discord
+    new DiscordListener();
 
     //Comands!
     PaperCommandManager commandManager = new PaperCommandManager(this);
@@ -31,7 +36,16 @@ public class ExamplePlugin extends JavaPlugin {
   }
 
 
+  //TaskChain!
+  private static TaskChainFactory taskChainFactory;
 
+  public static <T> TaskChain<T> newChain() {
+    return taskChainFactory.newChain();
+
+  }
+  public static <T> TaskChain<T> newSharedChain(String name) {
+    return taskChainFactory.newSharedChain(name);
+  }
 
   public static ExamplePlugin getInstance() {
     return instance;
