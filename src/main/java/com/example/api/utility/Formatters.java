@@ -1,4 +1,4 @@
-package com.example.utility;
+package com.example.api.utility;
 
 import org.bukkit.ChatColor;
 

@@ -1,14 +1,12 @@
-package com.example.command;
+package com.example.global.command;
 
 import co.aikar.commands.*;
 import co.aikar.commands.annotation.*;
 import co.aikar.taskchain.TaskChain;
 import com.example.ExamplePlugin;
-import com.example.utility.Formatters;
-import org.bukkit.Sound;
+import com.example.api.utility.Formatters;
 import org.bukkit.entity.Player;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 

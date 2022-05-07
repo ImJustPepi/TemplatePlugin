@@ -1,7 +1,7 @@
-package com.example.listener.discord;
+package com.example.global.listener.discord;
 
 import com.example.ExamplePlugin;
-import com.example.utility.Formatters;
+import com.example.api.utility.Formatters;
 import lombok.Getter;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;

@@ -4,8 +4,8 @@ import co.aikar.commands.PaperCommandManager;
 import co.aikar.taskchain.BukkitTaskChainFactory;
 import co.aikar.taskchain.TaskChain;
 import co.aikar.taskchain.TaskChainFactory;
-import com.example.command.ExampleCommand;
-import com.example.listener.discord.DiscordListener;
+import com.example.global.command.ExampleCommand;
+import com.example.global.listener.discord.DiscordListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ExamplePlugin extends JavaPlugin {
@@ -14,8 +14,8 @@ public class ExamplePlugin extends JavaPlugin {
 
   @Override
   public void onEnable() {
-    initPlugin();
     instance = this;
+    initPlugin();
     taskChainFactory = BukkitTaskChainFactory.create(this);
   }
 

@@ -1,4 +1,4 @@
-package com.example.command;
+package com.example.global.command;
 
 import co.aikar.commands.BaseCommand;
 
