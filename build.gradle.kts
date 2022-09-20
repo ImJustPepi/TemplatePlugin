@@ -2,7 +2,7 @@ import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 
 plugins {
   `java-library`
-  id("io.papermc.paperweight.userdev") version "1.3.4"
+  id("io.papermc.paperweight.userdev") version "1.3.8"
   id("xyz.jpenilla.run-paper") version "1.0.6"
   id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
 
